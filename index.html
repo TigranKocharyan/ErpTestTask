@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Online market</title>
+
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+    <link rel="icon" type="image/x-icon" href="shop.ico" />
+  </head>
+  <body>
+    <div class="header">
+      <h1>Online Market</h1>
+      <div class="cart-icon" id="cartIcon">
+        <i class="fas fa-shopping-cart"></i>
+        <span id="cartItemCount">0</span>
+      </div>
+    </div>
+
+    <div class="lists">
+      <ul>
+        Products
+      </ul>
+      <ul>
+        Brands
+      </ul>
+      <ul>
+        Manufacturers
+      </ul>
+    </div>
+
+    <div class="sorting">
+      <select id="sortSelect" class="dropdown">
+        <option value="">Sort By</option>
+        <option value="priceLowToHigh">Price (low first)</option>
+        <option value="priceHighToLow">Price (high first)</option>
+        <option value="nameAToZ">Name (A-Z)</option>
+        <option value="nameZToA">Name (Z-A)</option>
+        <option value="popularity">Popularity</option>
+      </select>
+
+      <div>
+        <button id="filterIcon"><i class="fas fa-filter"></i></button>
+        <div id="filterMenu" style="display: none">
+          <select id="categoryFilter">
+            <option value="">Filter by Category</option>
+          </select>
+          <input type="number" id="minPrice" placeholder="Min Price" />
+          <input type="number" id="maxPrice" placeholder="Max Price" />
+          <button id="applyButton">Apply</button>
+        </div>
+      </div>
+    </div>
+    <div class="dropdowns">
+      <select class="dropdown">
+        <option value="">Select Brand</option>
+        <option value="brand1">Brand 1</option>
+        <option value="brand2">Brand 2</option>
+        <option value="brand3">Brand 3</option>
+      </select>
+      <select class="dropdown">
+        <option value="">Select Category</option>
+        <option value="category1">Category 1</option>
+        <option value="category2">Category 2</option>
+        <option value="category3">Category 3</option>
+      </select>
+      <select class="dropdown">
+        <option value="">Select Manufacturer</option>
+        <option value="manufacturer1">Manufacturer 1</option>
+        <option value="manufacturer2">Manufacturer 2</option>
+        <option value="manufacturer3">Manufacturer 3</option>
+      </select>
+    </div>
+
+    <div class="cart-sidebar" id="cartSidebar">
+      <h2>Your Cart</h2>
+      <ul id="cartItems"></ul>
+      <p id="cartTotal"></p>
+      <button id="buyButton">Buy</button>
+      <button id="closeCart">Close</button>
+    </div>
+
+    <div id="productContainer"></div>
+  </body>
+</html>
